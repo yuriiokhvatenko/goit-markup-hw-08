@@ -6,6 +6,11 @@
     }
 
     &__item{
+            @include screenType(fix-mobile) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
             @include screenType(tablet){
             flex-basis: calc((100% - 30px) / 2);
             }
@@ -27,8 +32,9 @@
 
          &__title {
              margin-bottom: 10px;
-
-            text-align: center;
+            @include screenType(fix-mobile) {
+                text-align: center;
+            }
              color: var(--secondary-text-color);
              font-weight: 700;
              font-size: 14px;
@@ -38,8 +44,6 @@
          }
     
          &__text {
-             margin-bottom: 30px;
-
              color: var(--main-text-color);
              font-weight: 400;
              font-size: 14px;
