@@ -1,0 +1,49 @@
+.features {
+    @include screenType(tablet){
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    }
+
+    &__item{
+            @include screenType(tablet){
+            flex-basis: calc((100% - 30px) / 2);
+            }
+            @include screenType(desktop) {
+            flex-basis: calc((100% - 3*30px) / 4);
+        }
+    }
+   
+    &__thumb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+            margin-bottom: 30px;
+    
+            background-color: #F5F4FA;
+            border-radius: 4px;
+        }
+
+         &__title {
+             margin-bottom: 10px;
+    
+             color: var(--secondary-text-color);
+             font-weight: 700;
+             font-size: 14px;
+             line-height: 1.14;
+             letter-spacing: 0.03em;
+             text-transform: uppercase;
+         }
+    
+         &__text {
+             color: var(--main-text-color);
+             font-weight: 400;
+             font-size: 14px;
+             line-height: 1.71;
+             letter-spacing: 0.03em;
+         }
+}
+
+
+

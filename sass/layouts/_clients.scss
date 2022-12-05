@@ -1,0 +1,43 @@
+.clients {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    &__item {
+        flex-basis: calc((100% - 30px) / 2);
+        @include screenType(tablet) {
+                flex-basis: calc((100% - 2*30px) / 3);
+            }
+        @include screenType(desktop) {
+                flex-basis: calc((100% - 5*30px) / 6);
+            }
+    }
+    
+    &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 92px;
+    
+            color: var(--icons-color);
+            border: 1px solid var(--icons-color);
+            border-radius: 4px;
+            transition: color var(--primary-transition),
+                border var(--primary-transition),
+                transform var(--primary-transition);
+        }
+
+        &__link:hover,
+        &__link:focus {
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+        }
+    
+        &__icon {
+            fill: currentColor;
+        }
+}
+
+
+

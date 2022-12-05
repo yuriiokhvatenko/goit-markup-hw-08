@@ -1,0 +1,74 @@
+.hero {
+    padding: 118px 0;
+    max-width: 1600px;
+    height: 400px;
+
+    @include screenType(desktop){
+        padding: 200px 0;
+        height: 600px;
+    }
+    margin-left: auto;
+    margin-right: auto;
+    outline: 1px solid black;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg-hero_sm.jpg);
+
+    @include screenType(retina){
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg-hero_sm@2x.jpg);
+    }
+
+    @include screenType(tablet){
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg-hero_md.jpg);
+
+        @include screenType(retina) {
+                background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/hero/bg-hero_md@2x.jpg);
+            }
+    }
+
+    @include screenType(desktop) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+            url(../images/hero/bg-hero_lg.jpg);  
+
+        @include screenType(retina) {
+                background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/hero/bg-hero_lg@2x.jpg);
+            }
+    }
+
+    background-color: #C4C4C4;
+
+    &__title {
+            min-width: 360px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+    
+            color: var(--white-text-color);
+            @include fonts(900, 26px, 1.62, 0.06em);
+            text-transform: uppercase;
+            @include screenType(desktop){
+                width: 696px;
+                @include fonts(900, 44px, 1.36, 0.06em);
+                text-transform: uppercase;
+            }             
+            text-align: center;
+        }
+}
+
+
+

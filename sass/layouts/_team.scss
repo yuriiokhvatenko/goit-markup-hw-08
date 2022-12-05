@@ -1,0 +1,60 @@
+.team {
+    background-color: #F5F4FA;
+
+    &__list {
+        @include screenType(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__item {
+        @include screenType(tablet) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
+
+        @include screenType(desktop) {
+            flex-basis: calc((100% - 3*30px) / 4);
+        }
+
+        background-color: #FFFFFF;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 0px 0px 4px 4px;
+    }
+
+    &__item:not(:last-child) {
+        @include screenType(fix-mobile) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__description {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+
+        color: var(--secondary-text-color);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+
+    &__position {
+        margin-bottom: 16px;
+
+        color: var(--main-text-color);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        letter-spacing: 0.03em;
+    }
+}
