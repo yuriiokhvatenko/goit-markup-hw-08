@@ -23,10 +23,14 @@ body {
 }
 
 .section-title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
     color: var(--secondary-text-color);
     text-align: center;
-    @include fonts(700, 36px, 1.16, 0.03em);
+    
+    @include fonts(700, 28px, 1.16, 0.03em);
+    @include screenType(desktop) {
+        @include fonts(700, 36px, 1.16, 0.03em);
+        padding-bottom: 50px;
+    }
 }
-
